@@ -14,6 +14,9 @@ Generate anki decks from japanese text
 - It is sloooow (some library i'm using don't fit this purpose, there is quite a work to do for this)
 - CLI only for now
 
+#### Requirements
+- Python 3.8+ (Not tested with older versions)
+
 #### Install
 
 ```bash
