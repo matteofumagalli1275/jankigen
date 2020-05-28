@@ -14,11 +14,11 @@ def main(args=None):
     parser = argparse.ArgumentParser(description='Generate anki deck from file')
     parser.add_argument('path', type=str,
                         help='File or directory with text files')
-    parser.add_argument('--disable_shuffle_card', type=bool, const=True, nargs='?',
+    parser.add_argument('--disable_shuffle_card', action='store_true',
                         help='Shuffles cards to prevent text understanding/spoiler')
-    parser.add_argument('--deck_per_text_file', type=bool, const=True, nargs='?',
+    parser.add_argument('--enable_deck_per_text_file', action='store_true',
                         help='If searching in a directory, create an anki file for each text file found')
-    parser.add_argument('--disable_gen_global_deck_for_all_files', type=bool, const=True, nargs='?',
+    parser.add_argument('--disable_gen_global_deck_for_all_files', action='store_true',
                         help='Generate a global deck for all text files')
     parser.add_argument('--user_dict', type=str,
                         help='Simplified janome dictionary. A csv file as <surface form>,<part-of-speech>,<reading>')
@@ -31,13 +31,13 @@ def main(args=None):
         path = args.path
 
     if args.disable_shuffle_card:
-        shuffle_card = not args.disable_shuffle_card
+        shuffle_card = False
 
-    if args.deck_per_text_file:
-        deck_per_text_file = args.deck_per_text_file
+    if args.enable_deck_per_text_file:
+        deck_per_text_file = True
 
     if args.disable_gen_global_deck_for_all_files:
-        gen_global_deck_for_all_files = not args.disable_gen_global_deck_for_all_files
+        gen_global_deck_for_all_files = False
 
     if args.user_dict:
         user_dict = args.user_dict

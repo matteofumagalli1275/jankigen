@@ -32,14 +32,14 @@ pip install jankigen
 jankigen text_file.txt
 
 # Generate one anki deck for each file
-jankigen directory_with_txts --disable_shuffle_card --deck_per_text_file --disable_gen_global_deck_for_all_files
+jankigen directory_with_txts --disable_shuffle_card --enable_deck_per_text_file --disable_gen_global_deck_for_all_files
 
 ```
 
 ```
 jankigen --help
 
-usage: jankigen [-h] [--disable_shuffle_card [DISABLE_SHUFFLE_CARD]] [--deck_per_text_file [DECK_PER_TEXT_FILE]]
+usage: jankigen [-h] [--disable_shuffle_card [DISABLE_SHUFFLE_CARD]] [--enable_deck_per_text_file [ENABLE_DECK_PER_TEXT_FILE]]
                 [--disable_gen_global_deck_for_all_files [DISABLE_GEN_GLOBAL_DECK_FOR_ALL_FILES]]
                 [--user_dict USER_DICT] [--user_dict_en USER_DICT_EN]
                 path
@@ -53,7 +53,7 @@ optional arguments:
   -h, --help            show this help message and exit
   --disable_shuffle_card [DISABLE_SHUFFLE_CARD]
                         Shuffles cards to prevent text understanding/spoiler
-  --deck_per_text_file [DECK_PER_TEXT_FILE]
+  --enable_deck_per_text_file [ENABLE_DECK_PER_TEXT_FILE]
                         If searching in a directory, create an anki file for each text file found
   --disable_gen_global_deck_for_all_files [DISABLE_GEN_GLOBAL_DECK_FOR_ALL_FILES]
                         Generate a global deck for all text files

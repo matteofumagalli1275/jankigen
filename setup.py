@@ -7,7 +7,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setuptools.setup(name='jankigen',
-                 version='0.1.1',
+                 version='0.1.2',
                  packages=setuptools.find_packages(),
                  entry_points={
                      'console_scripts': [
