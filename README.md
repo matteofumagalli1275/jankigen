@@ -1,6 +1,6 @@
 ## JANKIGEN
 
-Generate anki decks from japanese text
+Generate Anki decks from Japanese text
 
 #### Features
 - Generate decks from directories
