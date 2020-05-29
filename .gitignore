@@ -5,3 +5,4 @@ dist/
 jankigen.egg-info/
 venv/
 .idea/
+__README.txt
