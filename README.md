@@ -28,7 +28,7 @@ pip install jankigen
 ```bash
 # Decks are generated in the same folder of the parsed file/directory
 
-# Generate one anki deck this file
+# Generate one anki deck for this file
 jankigen text_file.txt
 
 # Generate one anki deck for each file
