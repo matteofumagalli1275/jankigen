@@ -3,6 +3,7 @@
 Generate Anki decks from Japanese text
 
 #### Features
+- CLI and GUI
 - Generate decks from directories
 - Generate deck from single text file
 - Card order is shuffled to prevent text understanding (enabled by default)
@@ -15,7 +16,7 @@ Generate Anki decks from Japanese text
 - CLI only for now
 
 #### Requirements
-- Python 3.8+ (Not tested with older versions)
+- Python 3.7+
 
 #### Install
 
@@ -27,6 +28,9 @@ pip install jankigen
 
 ```bash
 # Decks are generated in the same folder of the parsed file/directory
+
+# Run GUI mode
+jankigen
 
 # Generate one anki deck for this file
 jankigen text_file.txt
