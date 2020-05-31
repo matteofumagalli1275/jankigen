@@ -7,13 +7,14 @@ from jamdict.jmdict import JMDEntry
 from jamdict.jmdict import Sense
 from jamdict.jmdict import SenseGloss
 from jamdict.jmdict import KanaForm
+import os
 import csv
-
 
 class LearningMaterialGetter:
     def __init__(self, user_dict="", user_dict_en=""):
         self.dict_en = {}
-        self.jmd = Jamdict()
+        dbfile = os.path.dirname(__file__) + "/db/jamdict.db"
+        self.jmd = Jamdict(db_file=dbfile, kd2_file=dbfile)
         if user_dict != "":
             self.tokenizer = Tokenizer(user_dict, udic_type="simpledic", udic_enc="utf8")
         else:

@@ -44,8 +44,8 @@ class CliUtils:
             CardGen(token, dic_info, kanji_notes, word_notes)
 
         if self.gen_global_anki_for_all_files:
-            self.kanji_notes = {**kanji_notes, **self.kanji_notes}
-            self.word_notes = {**word_notes, **self.word_notes}
+            self.kanji_notes = self.__merge_two_dicts(kanji_notes, self.kanji_notes)
+            self.word_notes = self.__merge_two_dicts(word_notes, self.word_notes)
 
         if self.anki_per_text_file:
             DeckGen(os.path.basename(full_a),
@@ -62,3 +62,8 @@ class CliUtils:
                 self.__handle_dir(os.path.join(path, full_a))
             else:
                 self.__handle_file(full_a)
+
+    def __merge_two_dicts(self, d1, d2):
+        z = d1.copy()  # start with x's keys and values
+        z.update(d2)  # modifies z with y's keys and values & returns None
+        return z
