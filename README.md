@@ -13,7 +13,7 @@ Generate Anki decks from Japanese text
 
 #### Limitations/Known issues
 - It is sloooow (some library i'm using don't fit this purpose, there is quite a work to do for this)
-- CLI only for now
+- When run a warning about mebab.exe is shown, ignore it
 
 #### Requirements
 - Python 3.7+
