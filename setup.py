@@ -27,7 +27,7 @@ setuptools.setup(name='jankigen',
                      'genanki',
                      'jamdict',
                      'janome',
-					 'ttkthemes'
+                     'ttkthemes'
                  ],
                  description="Generate Anki decks from Japanese text",
                  long_description=long_description,
