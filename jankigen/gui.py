@@ -10,6 +10,7 @@ from jankigen.deck_gen import DeckGen
 from jankigen.learning_material_getter import LearningMaterialGetter
 from jankigen.version import version_string
 import os
+import sys
 
 
 class Application(tk.Frame):
@@ -77,6 +78,7 @@ class Application(tk.Frame):
     def generate_deck(self):
         shuffle = self.shuffle_bool.get()
         self.btn_generate.config(text="Wait...")
+        self.btn_generate.configure(state=tk.DISABLED)
 
         name = tk.simpledialog.askstring("Enter deck name", "Enter deck name")
         if not name == "" and name:
@@ -107,11 +109,17 @@ class Application(tk.Frame):
                         kanji_notes)
 
         self.btn_generate.config(text="Generate Anki deck")
+        self.btn_generate.configure(state=tk.NORMAL)
 
 
 def do_gui():
     root = ThemedTk(theme="plastik")
     root.title('JANKIGEN - ' + version_string)
-    root.iconbitmap('favicon.ico')
+
+    favicon_path = '/res/favicon.ico'
+    if os.path.isfile(os.path.dirname(__file__) + favicon_path):
+        root.iconbitmap(os.path.dirname(__file__) + favicon_path)
+    else:
+        root.iconbitmap(os.path.dirname(sys.argv[0]) + favicon_path)
     app = Application(master=root)
     app.mainloop()

@@ -13,7 +13,6 @@ Generate Anki decks from Japanese text
 
 #### Limitations/Known issues
 - It is sloooow (some library i'm using don't fit this purpose, there is quite a work to do for this)
-- When run a warning about mebab.exe is shown, ignore it
 
 #### Requirements
 - Python 3.7+
@@ -67,4 +66,11 @@ optional arguments:
                         Match entries of user_dict with corresponding translations. <surface
                         form>,<reading>,<english_translation>
 
+```
+
+### Build
+
+```
+python presetup.py
+python setup.py sdist
 ```

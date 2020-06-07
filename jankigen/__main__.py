@@ -29,6 +29,8 @@ def main(args=None):
 
     args = parser.parse_args()
 
+    print("Wait initialization...")
+
     if args.path:
         path = args.path
         if args.disable_shuffle_card:
