@@ -8,12 +8,16 @@ from jamdict.jmdict import Sense
 from jamdict.jmdict import SenseGloss
 from jamdict.jmdict import KanaForm
 import os
+import sys
 import csv
 
 class LearningMaterialGetter:
     def __init__(self, user_dict="", user_dict_en=""):
         self.dict_en = {}
-        dbfile = os.path.dirname(__file__) + "/db/jamdict.db"
+        dbfile = os.path.dirname(__file__) + "/res/jamdict.db"
+        if not os.path.isfile(dbfile):
+            dbfile = os.path.dirname(sys.argv[0]) + "/res/jamdict.db"
+
         self.jmd = Jamdict(db_file=dbfile, kd2_file=dbfile)
         if user_dict != "":
             self.tokenizer = Tokenizer(user_dict, udic_type="simpledic", udic_enc="utf8")
