@@ -28,7 +28,7 @@ Pillow==7.1.2
 pkginfo==1.5.0.1
 puchikarui==0.1a3
 pycparser==2.20
-Pygments==2.6.1
+Pygments==2.7.4
 PyInstaller==3.6
 pyparsing==2.4.7
 pystache==0.5.4
