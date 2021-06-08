@@ -24,7 +24,7 @@ keyring==21.2.1
 lxml==4.5.1
 packaging==20.4
 pefile==2019.4.18
-Pillow==7.1.2
+Pillow==8.2.0
 pkginfo==1.5.0.1
 puchikarui==0.1a3
 pycparser==2.20
